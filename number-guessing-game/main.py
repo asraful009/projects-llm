@@ -7,21 +7,33 @@ import re
 URI = "http://localhost:11434/api/chat"
 MODEL = "llama3.1:latest"
 
-def ai_play(history, model=MODEL, stream=False):
-  system_prompt = """You are playing a number guessing game.
+def ai_play(low=0, high=100, history=None, model=MODEL, stream=False):
+  system_prompt = f"""You are playing a number guessing game.
 
-Rules:
-- Guess a number between 1 and 100
-- You will get feedback: low, high, correct
+The valid range is ALWAYS between {low} and {high}.
+You MUST stay within this range.
 
-STRICT:
-- Reply ONLY with a number
+After each guess:
+- "low" means your guess is too low → next guess must be higher
+- "high" means your guess is too high → next guess must be lower
+- "correct" means you are done
+
+STRICT RULES:
+- Output ONLY a number
 - No words, no explanation
+- NEVER go outside the range
+- NEVER repeat a previous guess
+
+MANDATORY STRATEGY:
+- First guess = middle of range
+- After each step, update your internal range using feedback
+- Always guess near the middle of the updated range
+- Reduce your search space every step
 """
 
   messages = [
       {"role": "system", "content": system_prompt},
-      {"role": "user", "content": "History:\n" + "\n".join(history) + "\nNext guess:"}
+      {"role": "user", "content": "History:\n" + "\n".join(history) + "\nNext your number:"}
   ]
 
   data = {
@@ -29,7 +41,7 @@ STRICT:
     "messages": messages,
     "stream": False,
     "options": {
-      "temperature": 0,
+      "temperature": .51,
       "stop": ["\n"]  # 🔥 important for small models
     }
   }
@@ -45,12 +57,14 @@ STRICT:
 
 
 if __name__ == "__main__":
-  number_to_guess = random.randint(1, 100)
+  low = 1
+  high = 100
+  number_to_guess = random.randint(low, high)
   history = []
   attempts = 0
 
   while True:
-    d = ai_play(history)
+    d = ai_play(low=low, high=high, history=history)
     
 
     if not d:
@@ -72,5 +86,5 @@ if __name__ == "__main__":
     else:
       print(f"Correct! {guess} in {attempts} attempts")
       break
-    print(f"attempts: {attempts} AI:{guess} result: {result} correct: {number_to_guess}")
     history.append(f"{guess} -> {result}")
+    print(f"attempts: {attempts} AI:{guess} result: {result} correct: {number_to_guess} --->> {history}")
