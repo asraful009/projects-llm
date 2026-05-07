@@ -1,108 +1,83 @@
-import numpy as np
-import faiss
-import requests
-from sentence_transformers import SentenceTransformer
+
+
+import os
+from transformers import AutoTokenizer
 import os
 from dotenv import load_dotenv
-from transformers import AutoTokenizer
 
 load_dotenv()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
 
-# tokenizer for chunking
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
-
-def split_into_chunks(text, max_tokens=800, overlap=100):
-    tokens = tokenizer.encode(text, truncation=False)
-
-    chunks = []
-    start = 0
-
-    while start < len(tokens):
-        end = start + max_tokens
-        chunk = tokens[start:end]
-        chunks.append(tokenizer.decode(chunk))
-
-        start += max_tokens - overlap
-
-    return chunks
-
-# 1. Load embedding model (FIXED: no token param needed here)
-model = SentenceTransformer("all-MiniLM-L6-v2")
-
-# 2. Load files safely
-folder = ".data"
-
-files = [
-    os.path.join(folder, f)
-    for f in os.listdir(folder)
-    if os.path.isfile(os.path.join(folder, f))
-]
-
-# 3. Read + chunk documents
-chunks = []
-for file in files:
-    with open(file, "r", encoding="utf-8") as f:
-        text = f.read()
-
-    chunks.extend(split_into_chunks(text))
-
-print(f"Total chunks: {len(chunks)}")
-
-# 4. Convert text → embeddings
-embeddings = model.encode(chunks, show_progress_bar=True)
-
-# IMPORTANT: ensure float32 for FAISS
-embeddings = np.array(embeddings).astype("float32")
-
-# 5. Create FAISS index (use cosine-like similarity)
-dimension = embeddings.shape[1]
-index = faiss.IndexFlatL2(dimension)
-index.add(embeddings)
-
-# 6. Ask question
-query = input("Ask: ")
-
-# 7. Query embedding
-query_vec = model.encode([query]).astype("float32")
-
-# 8. Search
-k = 3
-distances, indices = index.search(query_vec, k)
-
-# 9. FIX: retrieve from correct source (chunks, not "lines")
-context = "\n\n".join([chunks[i] for i in indices[0]])
-
-print("\n[Retrieved Context]")
-print(context)
-
-# 10. Prompt for LLM
-prompt = f"""
-You are a helpful assistant.
-
-Use the context below to answer the question.
-
-Context:
-{context}
-
-Question:
-{query}
-
-Answer clearly and concisely.
-"""
-
-# 11. Call Ollama
-response = requests.post(
-    "http://localhost:11434/api/generate",
-    json={
-        "model": "llama3.1:latest",
-        "prompt": prompt,
-        "stream": False
-    }
+tokenizer = AutoTokenizer.from_pretrained(
+  "sentence-transformers/all-MiniLM-L6-v2", token=HF_TOKEN
 )
 
-answer = response.json()["response"]
+def list_files_in_directory(directory):
+  return [
+    f for f in os.listdir(directory) 
+    if os.path.isfile(os.path.join(directory, f))
+    and f.endswith(".txt")
+  ]
 
-print("\n[Answer]")
-print(answer)
+def read_file(file_path):
+  text = None
+  with open(file_path, "r", encoding="utf-8") as f:
+    text = f.read().strip()
+  return text if text else None
+
+def read_all_files_in_directory(directory):
+  data = []
+  files = list_files_in_directory(directory)
+  for file in files:
+    data.append(read_file(os.path.join(directory, file)))
+  return data
+
+def split_into_chunks(text, max_tokens=300, overlap=50):
+  tokens = tokenizer.encode(text, add_special_tokens=False)
+  chunks = []
+  start = 0
+
+  while start < len(tokens):
+    end = start + max_tokens
+    chunk_tokens = tokens[start:end]
+    print(f"Chunk tokens: {len(chunk_tokens)}")
+    chunk = tokenizer.decode(chunk_tokens)
+    chunks.append(chunk)
+    start += max_tokens - overlap
+
+  return chunks
+
+
+def large_chunk_splitter(text, max_tokens=300, overlap=50):
+  paragraphs = text.split("\n\n")
+  print(f"Text split into {len(paragraphs)} paragraphs.")
+  chunks = []
+  for paragraph in paragraphs:
+    paragraph_chunks = split_into_chunks(paragraph, max_tokens, overlap)
+    chunks.extend(paragraph_chunks)
+  return chunks
+
+def save_chunks_to_files(chunks, output_dir=".chunks"):
+  os.makedirs(output_dir, exist_ok=True)
+  for i, chunk in enumerate(chunks):
+    with open(os.path.join(output_dir, f"chunk_{i}.txt"), "w", encoding="utf-8") as f:
+      f.write(chunk)
+
+def main():
+  print("Hello, RAG!")
+  data = read_all_files_in_directory(".data")
+  print(f"Read {len(data)} files.")
+  chunks_all = []
+  for i, text in enumerate(data):
+    if not text:
+      continue
+    chunks = large_chunk_splitter(text)
+    print(f"File {i} split into {len(chunks)} chunks.")
+    chunks_all.extend(chunks)
+
+  print(f"Total chunks: {len(chunks_all)}")
+  save_chunks_to_files(chunks_all)
+
+if __name__ == "__main__":
+  main()
