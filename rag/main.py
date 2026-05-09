@@ -44,7 +44,7 @@ def split_into_chunks(text, max_tokens=300, overlap=50):
     chunks.append(chunk)
     start += max_tokens - overlap
 
-  return chunks
+  return {"token_len": len(tokens), "chunks": chunks}
 
 
 def large_chunk_splitter(text: str| None, max_tokens=300, overlap=50):
@@ -55,7 +55,7 @@ def large_chunk_splitter(text: str| None, max_tokens=300, overlap=50):
   chunks = []
   for paragraph in paragraphs:
     paragraph_chunks = split_into_chunks(paragraph, max_tokens, overlap)
-    chunks.extend(paragraph_chunks)
+    chunks.append(paragraph_chunks)
   return chunks
 
 def save_chunks_to_files(chunks, output_dir=".chunks"):
@@ -65,6 +65,7 @@ def save_chunks_to_files(chunks, output_dir=".chunks"):
       f.write(chunk)
 
 def row_data_to_vector(root_path = ".data", rag_db: RagDB = None):
+  os.makedirs(".ai_data", exist_ok=True)
   if os.path.exists(".ai_data/faiss.index"):
     print("Loading FAISS index from file...")
     faiss_index = faiss.read_index(".ai_data/faiss.index")
@@ -89,17 +90,19 @@ def row_data_to_vector(root_path = ".data", rag_db: RagDB = None):
     
     chunks = large_chunk_splitter(meta["data"])
     print(f"File {i} split into {len(chunks)} chunks.")
-    chunks_all.extend(chunks)
-    document_id = rag_db.insert_document(file_name=f"{meta['file_name']}", total_chunks=len(chunks_all))
-    for j, chunk in enumerate(chunks):
-      token_count = len(tokenizer.encode(chunk, add_special_tokens=False))
-      embedding = model.encode(chunk)
+    document_id = rag_db.insert_document(file_name=f"{meta['file_name']}", total_chunks=len(chunks))
+    for j, chunk_meta in enumerate(chunks):
+      if len(chunk_meta["chunks"]) == 0:
+        continue
+      chunk = chunk_meta["chunks"][0]
+      chunks_all.extend(chunk)
+      embedding = model.encode(chunk, normalize_embeddings=True)
       embedding_blob = pickle.dumps(embedding)
       rag_db.insert_chunk(
         document_id=document_id,
         chunk_text=chunk,
         chunk_index=j,
-        token_count=token_count,
+        token_count=chunk_meta["token_len"],
         embedding=embedding_blob,
       )
   print(f"Total chunks: {len(chunks_all)}")
@@ -108,14 +111,14 @@ def row_data_to_vector(root_path = ".data", rag_db: RagDB = None):
   embeddings = np.array(embeddings).astype("float32")
   print(embeddings.shape)
   dimension = embeddings.shape[1]
-  faiss_index = faiss.IndexFlatL2(dimension)
+  faiss_index = faiss.IndexFlatIP(dimension)
   faiss_index.add(embeddings)
   faiss.write_index(faiss_index, ".ai_data/faiss.index")
   return faiss_index
 
 def search(query, index, model, rag_db, k=5):
   # 1. query → vector
-  query_vec = model.encode([query]).astype("float32")
+  query_vec = model.encode([query], normalize_embeddings=True).astype("float32")
   # 2. FAISS search
   distances, indices = index.search(query_vec, k)
   if rag_db is None:
@@ -132,11 +135,20 @@ def search(query, index, model, rag_db, k=5):
   return results
 
 def generate_answer(query, context):
-  prompt = f"""You are an AI assistant. Use this context to answer:\n
-    Context: {context}\n
-    Question: {query}\n
+  prompt = f"""
+    You are a helpful AI assistant.
+    
+    Answer ONLY from the provided context.
+    If the answer is not in the context, say "I could not find the answer in the documents."
+    
+    Context:
+    {context}
+    
+    Question:
+    {query}
+    
     Answer:
-  """
+    """
 
   return ask_ollama(prompt)
 
@@ -157,10 +169,11 @@ def main():
   # query = input("Query: ")
   query = "in `THE ADVENTURE OF THE THREE GABLES` story what is main story. explain in one line."
   results = search(query, faiss_index, model, None, 250)
-  context = ""
+  contexts = []
   for i, item in enumerate(results):
     print(f"[ {i+1} ] (score: {item['distance']}):  {item['text']} ")
-    context = "\n".join([c for c in item['text']])
+    contexts.append(item['text'])
+  context = "\n\n".join(contexts)
   answers = generate_answer(query, context)
   print(answers)
 
