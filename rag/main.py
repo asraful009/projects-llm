@@ -168,7 +168,7 @@ def main():
   faiss_index = row_data_to_vector()
   # query = input("Query: ")
   query = "in `THE ADVENTURE OF THE THREE GABLES` story what is main story. explain in one line."
-  results = search(query, faiss_index, model, None, 250)
+  results = search(query, faiss_index, model, None, 512)
   contexts = []
   for i, item in enumerate(results):
     print(f"[ {i+1} ] (score: {item['distance']}):  {item['text']} ")
