@@ -288,9 +288,10 @@ def main():
   for i, item in enumerate(results):
     print(
       f"[{i + 1}] "
-      f"(score: {item['score']:.4f})"
+      f"(score: {item['score']:.4f}) : "
+      f" {item["text"]}"
     )
-
+  ask_ai_model(query, results)
 
 
 
