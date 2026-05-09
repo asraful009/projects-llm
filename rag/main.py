@@ -1,11 +1,14 @@
 import os
-
-from dotenv import load_dotenv
-from transformers import AutoTokenizer
-from sentence_transformers import SentenceTransformer
-from rab_db import RagDB
 import pickle
 
+import faiss
+import numpy as np
+from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer
+
+from rab_db import RagDB
+import requests
 
 load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
@@ -61,15 +64,20 @@ def save_chunks_to_files(chunks, output_dir=".chunks"):
     with open(os.path.join(output_dir, f"chunk_{i}.txt"), "w", encoding="utf-8") as f:
       f.write(chunk)
 
-def main():
-  root_path = ".data"
+def row_data_to_vector(root_path = ".data", rag_db: RagDB = None):
+  if os.path.exists(".ai_data/faiss.index"):
+    print("Loading FAISS index from file...")
+    faiss_index = faiss.read_index(".ai_data/faiss.index")
+    return faiss_index
+
+  if rag_db is None:
+    rag_db = RagDB()
   if not os.path.exists(root_path):
     print(f"Directory {root_path} does not exist. Please create it and add .txt files to process.")
     return
   files = list_files_in_directory(root_path)
   print(f"Read {len(files)} files.")
   chunks_all = []
-  rag_db = RagDB()
   rag_db.create_table()
   for i, file in enumerate(files):
     if rag_db.get_documents_by_file_name(file) is not None:
@@ -87,7 +95,6 @@ def main():
       token_count = len(tokenizer.encode(chunk, add_special_tokens=False))
       embedding = model.encode(chunk)
       embedding_blob = pickle.dumps(embedding)
-      # print(embedding)
       rag_db.insert_chunk(
         document_id=document_id,
         chunk_text=chunk,
@@ -96,7 +103,67 @@ def main():
         embedding=embedding_blob,
       )
   print(f"Total chunks: {len(chunks_all)}")
+  embeddings = [ pickle.loads(x["embedding"]) for x in rag_db.get_all_chunks() ]
   rag_db.close()
+  embeddings = np.array(embeddings).astype("float32")
+  print(embeddings.shape)
+  dimension = embeddings.shape[1]
+  faiss_index = faiss.IndexFlatL2(dimension)
+  faiss_index.add(embeddings)
+  faiss.write_index(faiss_index, ".ai_data/faiss.index")
+  return faiss_index
+
+def search(query, index, model, rag_db, k=5):
+  # 1. query → vector
+  query_vec = model.encode([query]).astype("float32")
+  # 2. FAISS search
+  distances, indices = index.search(query_vec, k)
+  if rag_db is None:
+    rag_db = RagDB()
+  rows = rag_db.get_all_chunks()
+  results = []
+
+  for idx, dist in zip(indices[0], distances[0]):
+    results.append({
+      "text": rows[idx]["chunk_text"],
+      "distance": float(dist)
+    })
+  results = sorted(results, key=lambda x: x["distance"])
+  return results
+
+def generate_answer(query, context):
+  prompt = f"""You are an AI assistant. Use this context to answer:\n
+    Context: {context}\n
+    Question: {query}\n
+    Answer:
+  """
+
+  return ask_ollama(prompt)
+
+def ask_ollama(prompt, ollama_model="llama3.1:latest"):
+  url = "http://localhost:11434/api/generate"
+
+  payload = {
+    "model": ollama_model,
+    "prompt": prompt,
+    "stream": False
+  }
+
+  response = requests.post(url, json=payload)
+  return response.json()["response"]
+
+def main():
+  faiss_index = row_data_to_vector()
+  # query = input("Query: ")
+  query = "in `THE ADVENTURE OF THE THREE GABLES` story what is main story. explain in one line."
+  results = search(query, faiss_index, model, None, 250)
+  context = ""
+  for i, item in enumerate(results):
+    print(f"[ {i+1} ] (score: {item['distance']}):  {item['text']} ")
+    context = "\n".join([c for c in item['text']])
+  answers = generate_answer(query, context)
+  print(answers)
 
 if __name__ == "__main__":
   main()
+  

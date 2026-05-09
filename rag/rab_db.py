@@ -83,9 +83,24 @@ class RagDB:
     self.cursor.execute("SELECT * FROM documents WHERE file_name = ?", (file_name,))
     return self.cursor.fetchone()
 
-  def get_all_chunks(self):
-    self.cursor.execute("SELECT * FROM chunks")
-    return self.cursor.fetchall()
+  def get_all_chunks(self) -> list[dict] :
+    self.cursor.execute("""
+      SELECT id, document_id, chunk_text, chunk_index, token_count, embedding
+      FROM chunks
+      """
+    )
+    rows = self.cursor.fetchall()
+    results:list[dict] = []
+    for row in rows:
+      results.append({
+        "id": row[0],
+        "document_id": row[1],
+        "chunk_text": row[2],
+        "chunk_index": row[3],
+        "token_count": row[4],
+        "embedding": row[5]
+      })
+    return results
 
   def get_chunks_by_document(self, document_id):
     self.cursor.execute("""
