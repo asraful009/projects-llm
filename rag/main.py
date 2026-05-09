@@ -158,8 +158,8 @@ def row_data_to_vector(root_path=".data", rag_db: RagDB = None):
     document_id = rag_db.insert_document(file_name=file, total_chunks=len(chunks))
 
     for j, chunk in enumerate(chunks):
+      chunk = f"{file} [line {j}]: {chunk}"
       token_count = len(tokenizer.encode(chunk, add_special_tokens=False))
-
       embedding = model.encode(chunk, normalize_embeddings=True)
       embedding_blob = pickle.dumps(embedding)
 
@@ -171,27 +171,27 @@ def row_data_to_vector(root_path=".data", rag_db: RagDB = None):
         embedding=embedding_blob,
       )
 
-    rows = rag_db.get_all_chunks()
+  rows = rag_db.get_all_chunks()
 
-    embeddings = [
-        pickle.loads(row["embedding"])
-        for row in rows
-    ]
+  embeddings = [
+      pickle.loads(row["embedding"])
+      for row in rows
+  ]
 
-    rag_db.close()
+  rag_db.close()
 
-    embeddings = np.array(embeddings).astype("float32")
+  embeddings = np.array(embeddings).astype("float32")
 
     # print("Embeddings shape:", embeddings.shape)
 
-    dimension = embeddings.shape[1]
-    # Cosine Similarity
-    faiss_index = faiss.IndexFlatIP(dimension)
-    faiss_index.add(embeddings)
+  dimension = embeddings.shape[1]
+  # Cosine Similarity
+  faiss_index = faiss.IndexFlatIP(dimension)
+  faiss_index.add(embeddings)
 
-    faiss.write_index(faiss_index, faiss_path)
+  faiss.write_index(faiss_index, faiss_path)
 
-    return faiss_index
+  return faiss_index
 
 
 # =========================
@@ -259,23 +259,8 @@ Answer:
 
   return ask_ollama(prompt)
 
-
-# =========================
-# Main
-# =========================
-
-def main():
-
-  faiss_index = row_data_to_vector()
-  query = (
-      "in `THE ADVENTURE OF THE THREE GABLES` "
-      "story what is main story. "
-      "explain in one paragraph."
-  )
-
-  results = search(query=query, index=faiss_index, k=1024)
+def ask_ai_model(query, results):
   contexts = []
-
   for i, item in enumerate(results):
     contexts.append(item["text"])
 
@@ -286,6 +271,27 @@ def main():
   print("\n========== ANSWER ==========\n")
   print(answer)
   print("\n========== ANSWER ==========\n")
+
+# =========================
+# Main
+# =========================
+
+def main():
+
+  faiss_index = row_data_to_vector()
+  query = (
+    "in `THE ADVENTURE OF THE THREE GABLES` "
+    "story what is main story. "
+    "explain in one paragraph."
+  )
+  results = search(query=query, index=faiss_index, k=1024)
+  for i, item in enumerate(results):
+    print(
+      f"[{i + 1}] "
+      f"(score: {item['score']:.4f})"
+    )
+
+
 
 
 if __name__ == "__main__":
