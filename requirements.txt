@@ -1,0 +1,36 @@
+# --- Core HTTP (for calling Ollama API) ---
+requests
+
+# --- Numerical operations ---
+numpy
+
+# --- Embeddings (text → vectors) ---
+sentence-transformers
+
+# --- Vector search (CPU version, works on AMD) ---
+faiss-cpu
+
+
+# ===== OPTIONAL (use if you want full framework) =====
+
+# LangChain core (RAG pipeline)
+langchain
+langchain-core
+langchain-community
+
+# Vector database alternative (instead of FAISS)
+chromadb
+
+# Ollama Python client (optional, you can also use requests)
+ollama
+
+
+# ===== OPTIONAL UTILITIES =====
+
+# PDF loading (if you want RAG on PDFs)
+pypdf
+
+# Progress bars (nice for indexing large data)
+tqdm
+
+python-dotenv
