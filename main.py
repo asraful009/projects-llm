@@ -1,14 +1,9 @@
 
-import os
-from readers.file_reader import FileReader
+from rag_2.rag_2 import Rag_2
 
 def main():
-  reader = FileReader()
-  document = []
-  for f in reader.get_all_files(os.path.join(os.getcwd(), ".data")):
-    print(f)
-    document.append(reader.read_one_file(f))
-  print(document)
+  rag = Rag_2()
+  rag.read_files()
 
 if __name__ == "__main__":
   main()
