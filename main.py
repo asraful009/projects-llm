@@ -1,6 +1,6 @@
 
 from rag_2.rag_2 import Rag_2
-
+import json
 
 def save_to_file(data, filename="chunks.json"):
   with open(filename, "w", encoding="utf-8") as f:
