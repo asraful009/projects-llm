@@ -17,6 +17,7 @@ faiss-cpu
 langchain
 langchain-core
 langchain-community
+langchain-text-splitters
 
 # Vector database alternative (instead of FAISS)
 chromadb
@@ -34,3 +35,5 @@ pypdf
 tqdm
 
 python-dotenv
+
+google-genai
