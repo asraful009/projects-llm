@@ -1,11 +1,12 @@
 import os
 
+
 from readers.file_reader import FileReader
 from chunking.recursive_chunking import RecursiveChunking
 
 class Rag_2:
   def __init__(self):
-    self.recursiveChunking = RecursiveChunking()
+    self.__recursiveChunking = RecursiveChunking()
 
   def read_files(self):
     reader = FileReader()
@@ -17,5 +18,5 @@ class Rag_2:
     return documents
 
   def chunk_document(self, document):
-    paragraphs =  self.recursiveChunking.split_document(document)
-    print(len(paragraphs))
+    paragraphs =  self.__recursiveChunking.split_document(document)
+    return paragraphs
