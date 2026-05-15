@@ -1,8 +1,7 @@
 
 import os
 
-
-
+from chunking.local_llm_chuck import LocalLLMChunking
 from readers.file_reader import FileReader
 from chunking.recursive_chunking import RecursiveChunking
 from chunking.semantic_refinement import SemanticRefinement
@@ -14,6 +13,7 @@ class Rag_2:
     self.__recursiveChunking = RecursiveChunking()
     self.__semanticRefinement = SemanticRefinement()
     self.__tokenChunker = TokenChunker()
+    self.__localLLMChunking = LocalLLMChunking()
 
   def read_files(self):
     reader = FileReader()
@@ -40,3 +40,6 @@ class Rag_2:
       c = self.__tokenChunker.chunk_text(chunk)
       refine_chuck.extend(c)
     return refine_chuck
+
+  def extract_meta_chunks(self, chunks: list[str]):
+    return self.__localLLMChunking.extract_add_more_info(chunks)

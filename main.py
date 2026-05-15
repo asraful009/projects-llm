@@ -35,6 +35,8 @@ def main():
       chuck_for_token = json.load(file)
 
   print(len(chuck_for_token))
+  meta = rag.extract_meta_chunks(chuck_for_token)
+  save_to_file(meta, ".ai_data/chuck_meta.json")
 
 if __name__ == "__main__":
   main()
