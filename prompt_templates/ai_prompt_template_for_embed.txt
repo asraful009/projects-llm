@@ -1,0 +1,10 @@
+Type: {chunk_type}
+Title: {title}
+Summary: {summary}
+Content: {chunk}
+Keywords: {keywords}
+Topics: {topics}
+People: {people}
+Locations: {locations}
+Organizations: {orgs}
+Questions: {questions}
