@@ -3,11 +3,17 @@ import requests
 import json
 import re
 import os
+from google import genai
+from dotenv import load_dotenv
 
 class LocalLLMChunking:
   def __init__(self):
+    load_dotenv()
     self.__model = "llama3.1:latest" #  "qwen2.5:14b-instruct"
     self.__url = "http://localhost:11434/api/generate"
+    self.__client_gemini = genai.Client(api_key=os.getenv("GEMINI_AI_CLIENT_KEY"))
+    self.__client_gemini_model = "gemini-3.1-flash-lite"
+
 
   def extract_add_more_info(self, chucks: list[str]):
     chucks_with_meta = self.__enrich_chunks(chucks)
@@ -25,19 +31,27 @@ class LocalLLMChunking:
     chunks_text = json.dumps(chunks, indent=2, ensure_ascii=False)
     prompt = self.__load_prompt("./prompt_templates/ai_prompt_template.txt", chunks_text)
 
+    return self.__geminiAiCall(prompt)
+
+
+  def __geminiAiCall(self, prompt: str):
+    response = self.__client_gemini.models.generate_content(
+      model=self.__client_gemini_model,
+      contents=prompt
+    )
+    data = json.loads(response.text)
+    return data
+
+  def __localAiCall(self, prompt: str):
     res = requests.post(
-      self.__url ,
+      self.__url,
       json={
         "model": self.__model,
         "prompt": prompt,
         "stream": False,
-        "options": {
-          "temperature": 0
-        }
       }
     )
     output = res.json()["response"]
-
     return output
 
   def __safe_json_parse(self, text: str):
