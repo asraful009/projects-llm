@@ -24,7 +24,7 @@ class TokenChunker:
 
 
   def split_sentences(self, text):
-    sentences = re.split(r'(?<=[.!?])\s+', text)
+    sentences = re.split(r'(?<=[.!?।])\s+', text)
     return [s.strip() for s in sentences if s.strip()]
 
 
@@ -36,8 +36,12 @@ class TokenChunker:
 
     for sentence in sentences:
       sentence_tokens = self.token_count(sentence)
+
       # sentence too large
       if sentence_tokens > self.chunk_size:
+        words = sentence.split()
+        for i in range(0, len(words), 50):
+          current_chunk.append(" ".join(words[i:i + 50]))
         continue
 
       # chunk full
