@@ -14,10 +14,18 @@ def main():
 
   paragraphs = rag.chunk_document(documents[0])
   print(len(paragraphs))
-  chunks = rag.chunk_paragraphs(paragraphs)
-  print(len(chunks))
+  paragraphs_chunks = rag.chunk_paragraphs(paragraphs)
+  print(len(paragraphs_chunks))
 
-  save_to_file(chunks, "chunks.json")
+  save_to_file(paragraphs_chunks, ".ai_data/chunks_pargraph.json")
+  chuck_for_token = []
+  for paragraph in paragraphs_chunks:
+    chucks = rag.chunk_paragraph(paragraph)
+    chucks = rag.chunk_for_token(chucks)
+    chuck_for_token.extend(chucks)
+
+  save_to_file(chuck_for_token, ".ai_data/chuck_for_token.json")
+
 
 if __name__ == "__main__":
   main()

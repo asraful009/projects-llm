@@ -24,7 +24,6 @@ class SemanticRefinement:
     merged = []
     current_chunk = chunks[0]
     current_emb = embeddings[0]
-
     for i in range(1, len(chunks)):
       sim = np.dot(current_emb, embeddings[i])
 
@@ -37,6 +36,7 @@ class SemanticRefinement:
       if sim >= threshold:
         current_chunk += "\n" + chunks[i]
         current_emb = 0.7 * current_emb + 0.3 * embeddings[i]
+        current_emb = current_emb / np.linalg.norm(current_emb)
       else:
         merged.append(current_chunk)
         current_chunk = chunks[i]

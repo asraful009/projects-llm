@@ -20,6 +20,28 @@ class RecursiveChunking:
     chunks = self.__clean_chunks(chunks)
     return chunks
 
+  def split_paragraph(self, paragraph):
+    splitter = RecursiveCharacterTextSplitter(
+      chunk_size=1500,
+      chunk_overlap=150,
+      separators=[
+        "\n\n",
+        "\n",
+        ". ",
+        "! ",
+        "? ",
+        "; ",
+        ", ",
+        " ",
+        ""
+      ]
+    )
+    paragraph = self.__clean_chunk(paragraph)
+    chunks = splitter.split_text(paragraph)
+
+    chunks = self.__clean_chunks(chunks)
+    return chunks
+
   def __clean_chunks(self, chunks: list[str]) -> list[str]:
     cleaned_chunks = []
     for chunk in chunks:
