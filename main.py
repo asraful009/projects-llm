@@ -40,7 +40,8 @@ def main():
     with open('.ai_data/chuck_meta.json', 'r') as file:
       meta = json.load(file)
 
-  print(meta)
+  # print(meta)
+  rag.extract_faqs(meta)
 
 if __name__ == "__main__":
   main()

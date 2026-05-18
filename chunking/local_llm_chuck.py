@@ -19,6 +19,10 @@ class LocalLLMChunking:
     chucks_with_meta = self.__enrich_chunks(chucks)
     return chucks_with_meta
 
+  def extract_faqs_info(self, meta_info: dict):
+    faqs_meta = self.__extract_faqs(meta_info)
+    return faqs_meta
+
   def __load_prompt(self, prompt_path: str, chunks_text: str) -> str:
     base_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(base_dir)  # go up to projects-llm/
@@ -26,6 +30,32 @@ class LocalLLMChunking:
     with open(full_path, "r", encoding="utf-8") as f:
       template = f.read()
     return template.replace("{chunks}", chunks_text)
+
+  def __load_prompt_faqs(self, prompt_path: str, meta_data: str, faqs: str) -> str:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(base_dir)  # go up to projects-llm/
+    full_path = os.path.join(root_dir, prompt_path)
+    with open(full_path, "r", encoding="utf-8") as f:
+      template = f.read()
+    template = template.replace("{meta_data}", meta_data)
+    template = template.replace("{faqs}", faqs)
+    return template
+
+
+  def __extract_faqs(self, meta_info: dict):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(base_dir)  # go up to projects-llm/
+    full_path = os.path.join(root_dir, "./prompt_templates/generic_book_story_faq_0.txt")
+    faqs_str = ""
+    with open(full_path, "r", encoding="utf-8") as f:
+      faqs_str = f.read()
+    meta_info_str = json.dumps(meta_info, indent=2, ensure_ascii=False)
+    prompt = self.__load_prompt_faqs(
+      "./prompt_templates/ai_prompt_template_faq.txt",
+      meta_info_str,
+      faqs_str)
+    print(prompt)
+    return prompt
 
   def __enrich_chunks(self, chunks: list[str]):
     chunks_text = json.dumps(chunks, indent=2, ensure_ascii=False)

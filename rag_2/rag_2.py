@@ -53,3 +53,8 @@ class Rag_2:
     if not self.__localLLMChunking:
       self.__localLLMChunking = LocalLLMChunking()
     return self.__localLLMChunking.extract_add_more_info(chunks)
+
+  def extract_faqs(self, meta_info: dict):
+    if not self.__localLLMChunking:
+      self.__localLLMChunking = LocalLLMChunking()
+    return self.__localLLMChunking.extract_faqs_info(meta_info)
