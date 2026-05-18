@@ -1,215 +1,66 @@
-GENERIC BOOK / NOVEL / STORY FAQ
-
-SECTION 1: GENERAL INFORMATION
-
 Q: What is the title of the book?
-A: [Insert book title]
-
 Q: Who is the author?
-A: [Insert author name]
-
 Q: What genre does the book belong to?
-A: [e.g., Romance, Mystery, Science Fiction, Fantasy, Historical Fiction, Thriller, Literary Fiction]
-
 Q: Is this book part of a series?
-A: [Yes/No. If yes: which number, names of other books, can it be read standalone?]
-
 Q: How long is the book?
-A: [Number of pages or word count]
-
 Q: What is the target age group?
-A: [e.g., Children (0-8), Middle Grade (8-12), Young Adult (13-18), New Adult (18-25), Adult (18+)]
-
 Q: What is the reading level?
-A: [e.g., Easy, moderate, dense]
-
 Q: Does the story contain mature content or content warnings?
-A: [Yes/No. If yes: violence, strong language, sexual content, self-harm, substance abuse, grief, etc.]
-
-SECTION 2: PLOT AND SETTING
-
 Q: Can you give a short synopsis without spoilers?
-A: [2-3 sentence summary]
-
 Q: Where does the story take place?
-A: [e.g., Futuristic Tokyo, Victorian London, small fictional town, outer space]
-
 Q: When does the story take place?
-A: [e.g., 1980s, distant future, medieval era, present day]
-
 Q: What is the main conflict?
-A: [e.g., A quest to destroy an artifact, battle against an oppressive regime, solving a murder, overcoming personal trauma]
-
 Q: How does the story begin?
-A: [Brief description of opening]
-
 Q: What major events happen in the middle?
-A: [Key plot developments without final spoilers]
-
 Q: What is the climax?
-A: [The peak of the conflict]
-
 Q: How does the story end?
-A: [Describe ending: happy, tragic, open-ended, or bittersweet]
-
 Q: Does the story have major plot twists?
-A: [Yes/No. Describe only with spoiler warning]
-
 Q: Are there subplots?
-A: [Yes/No. Briefly describe subplots involving secondary characters]
-
 Q: What role does the setting play in the plot?
-A: [How the time and place affect the story]
-
-SECTION 3: CHARACTERS
-
 Q: Who is the protagonist (main character)?
-A: [Name and brief description: age, background, role]
-
 Q: Who is the antagonist (opposing force)?
-A: [Name or description: villain, society, nature, inner demon, etc. and their motive]
-
 Q: What motivates the main character?
-A: [Internal or external drives]
-
 Q: What are the protagonist's strengths?
-A: [Key positive traits]
-
 Q: What are the protagonist's weaknesses?
-A: [Key flaws or limitations]
-
 Q: Which character changes the most?
-A: [Name and how they transform]
-
 Q: Who is the most important supporting character?
-A: [Name and their role in the story]
-
 Q: What relationships drive the story forward?
-A: [Key relationships: friendship, romance, rivalry, family]
-
 Q: Is there a romantic subplot?
-A: [Yes/No. If yes, briefly describe]
-
-SECTION 4: THEMES AND STYLE
-
 Q: What are the main themes?
-A: [e.g., love, loss, identity, revenge, good vs. evil, coming of age, freedom, survival, redemption]
-
 Q: What lessons or messages does the story convey?
-A: [Key takeaways or moral ideas]
-
 Q: What is the tone of the story?
-A: [e.g., dark, hopeful, humorous, serious, ironic]
-
 Q: What emotions does the story try to evoke?
-A: [e.g., suspense, sadness, joy, fear, empathy]
-
 Q: What type of narration is used?
-A: [First-person, third-person limited, third-person omniscient, multiple POVs]
-
 Q: How is suspense created?
-A: [Techniques used: pacing, foreshadowing, cliffhangers, etc.]
-
 Q: What symbols or metaphors are used?
-A: [Key examples]
-
 Q: Does the story explore social or cultural issues?
-A: [Yes/No. If yes, which ones?]
-
-SECTION 5: UNIQUE ASPECTS AND AUDIENCE
-
 Q: What makes this story unique?
-A: [Distinctive elements compared to other books in the genre]
-
 Q: What genre conventions does it follow or break?
-A: [How it adheres to or subverts genre expectations]
-
 Q: What is the pacing like?
-A: [e.g., Fast-paced, slow-burn, steady]
-
 Q: What is the most emotional moment?
-A: [Describe without major spoilers if possible]
-
 Q: Are there any memorable quotes or scenes?
-A: [Examples or general description]
-
 Q: How realistic are the characters?
-A: [e.g., Highly realistic, archetypal, symbolic]
-
 Q: What kind of world-building is present?
-A: [For speculative fiction: rules, history, magic system, technology. For realistic fiction: authenticity of setting]
-
-SECTION 6: PRACTICAL INFORMATION
-
 Q: What formats are available?
-A: [e.g., Paperback, Hardcover, E-book, Audiobook, Large Print]
-
 Q: What is the ISBN?
-A: [Insert ISBN number(s)]
-
 Q: Who is the publisher?
-A: [Publisher name or "Self-published"]
-
 Q: What is the publication date?
-A: [Original publication date and/or latest edition]
-
 Q: Where can I buy this book?
-A: [e.g., Amazon, Barnes & Noble, Bookshop.org, local bookstores, direct from publisher]
-
 Q: Is there an audiobook version?
-A: [Yes/No. If yes: where available and narrator name]
-
 Q: Is the book available in libraries?
-A: [Yes/No. If yes: print, ebook, or both]
-
 Q: Is the book available in other languages?
-A: [List available languages or planned translations]
-
 Q: Can I read a sample before purchasing?
-A: [Yes/No. Where: e.g., Amazon, author's website]
-
 Q: Are there sequels, prequels, or spin-offs planned?
-A: [Yes/No/Maybe with details]
-
-SECTION 7: BOOK CLUBS, EDUCATION, AND FEEDBACK
-
 Q: Is there a reading guide or discussion questions?
-A: [Yes/No. Where to find it: back of book, author's website, etc.]
-
 Q: Is this book suitable for classroom use?
-A: [Yes/No. Appropriate grade level or subject areas]
-
 Q: Can the author visit a book club or school?
-A: [Yes/No/Maybe. Contact method for arrangements]
-
 Q: How can I leave a review?
-A: [Where: e.g., Amazon, Goodreads, Barnes & Noble]
-
 Q: How can I contact the author?
-A: [e.g., email, website, social media]
-
 Q: How can I report an error in the book?
-A: [Contact email for publisher or author]
-
 Q: Has this book won any awards?
-A: [List any awards or nominations]
-
-SECTION 8: RATING AND RECOMMENDATION
-
 Q: What audience would enjoy this story the most?
-A: [Fans of specific authors, genres, or themes]
-
 Q: What are the strongest aspects of the writing?
-A: [e.g., dialogue, description, pacing, character development]
-
 Q: What are the weakest aspects?
-A: [If applicable]
-
 Q: How memorable is the ending?
-A: [Brief evaluation]
-
 Q: Would you recommend this story to others?
-A: [Yes/No/With caveats]
-
 Q: What overall rating would you give and why?
-A: [e.g., 4/5 stars with brief justification]

@@ -41,7 +41,9 @@ def main():
       meta = json.load(file)
 
   # print(meta)
-  rag.extract_faqs(meta)
+  meta_faq = rag.extract_faqs(meta)
+  print(meta_faq)
+  save_to_file(meta_faq, ".ai_data/chuck_for_faqs.json")
 
 if __name__ == "__main__":
   main()

@@ -54,8 +54,8 @@ class LocalLLMChunking:
       "./prompt_templates/ai_prompt_template_faq.txt",
       meta_info_str,
       faqs_str)
-    print(prompt)
-    return prompt
+    # print(prompt)
+    return self.__geminiAiCall(prompt)
 
   def __enrich_chunks(self, chunks: list[str]):
     chunks_text = json.dumps(chunks, indent=2, ensure_ascii=False)

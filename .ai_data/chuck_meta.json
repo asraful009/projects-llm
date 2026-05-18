@@ -1,0 +1,344 @@
+{
+  "document_title": "The Adventure of the Three Students",
+  "document_summary": "Sherlock Holmes and Dr. Watson investigate a case of academic fraud at a university, where examination papers for the Fortescue Scholarship were tampered with. Holmes deduces that a student, Gilchrist, used his height to spot the papers and his athletic background to break in, while the tutor's servant, Bannister, attempted to shield the boy due to a past connection to the student's family.",
+  "document_type": "story",
+  "language": "en",
+  "estimated_reading_time_minutes": 22,
+  "global_keywords": [
+    "Sherlock Holmes",
+    "academic fraud",
+    "investigation",
+    "scholarship",
+    "deduction"
+  ],
+  "global_entities": {
+    "people": [
+      "Sherlock Holmes",
+      "Dr. Watson",
+      "Hilton Soames",
+      "Bannister",
+      "Gilchrist",
+      "Daulat Ras",
+      "Miles McLaren",
+      "Sir Jabez Gilchrist"
+    ],
+    "organizations": [
+      "St. Luke's College",
+      "University",
+      "Rhodesian Police"
+    ],
+    "locations": [
+      "Baker Street",
+      "South Africa",
+      "Rhodesia"
+    ],
+    "dates": [
+      "1895"
+    ],
+    "technologies": [
+      "electric light"
+    ]
+  },
+  "topics": [
+    "mystery",
+    "detective fiction",
+    "academia",
+    "ethics"
+  ],
+  "sentiment": {
+    "overall": "neutral",
+    "score": 0.1
+  },
+  "complexity_level": "intermediate",
+  "target_audience": "general public",
+  "chunks": [
+    {
+      "id": 0,
+      "title": "Introduction to the Case",
+      "chunk": "THE ADVENTURE OF THE THREE STUDENTS\n Arthur Conan Doyle",
+      "summary": "Title and authorship of the short story.",
+      "keywords": [
+        "Sherlock Holmes",
+        "Arthur Conan Doyle"
+      ],
+      "entities": {
+        "people": [
+          "Arthur Conan Doyle"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "literature"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.1,
+      "chunk_type": "introduction",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 1,
+      "title": "Setting the Scene",
+      "chunk": "It was in the year '95 that a combination of events, into which I\n need not enter, caused Mr. Sherlock Holmes and myself to spend some\n weeks in one of our great University towns...",
+      "summary": "Watson introduces the setting of the mystery in 1895 at a university town, establishing the need for discretion.",
+      "keywords": [
+        "1895",
+        "university",
+        "discretion"
+      ],
+      "entities": {
+        "people": [
+          "Sherlock Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [
+          "University town"
+        ],
+        "dates": [
+          "1895"
+        ],
+        "technologies": []
+      },
+      "topics": [
+        "mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "introduction",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 2,
+      "title": "The Arrival of Mr. Soames",
+      "chunk": "We were residing at the time in furnished lodgings close to a library... Here it was that one evening we received a visit from an acquaintance, Mr. Hilton Soames, tutor and lecturer at the College of St. Luke's.",
+      "summary": "Mr. Hilton Soames visits Holmes in a state of agitation, signaling the start of the mystery.",
+      "keywords": [
+        "Hilton Soames",
+        "St. Luke's"
+      ],
+      "entities": {
+        "people": [
+          "Hilton Soames"
+        ],
+        "organizations": [
+          "College of St. Luke's"
+        ],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "investigation"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.5,
+      "chunk_type": "background",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "What incident occurred at St. Luke's?"
+      ],
+      "references": []
+    },
+    {
+      "id": 3,
+      "title": "The Request for Help",
+      "chunk": "\"I trust, Mr. Holmes, that you can spare me a few hours... We have had a very painful incident at St. Luke's...\"",
+      "summary": "Soames asks for Holmes's help regarding a secret incident, preferring his discretion over police involvement.",
+      "keywords": [
+        "discretion",
+        "scandal"
+      ],
+      "entities": {
+        "people": [
+          "Sherlock Holmes",
+          "Soames"
+        ],
+        "organizations": [
+          "St. Luke's"
+        ],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "mystery"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.2
+      },
+      "importance_score": 0.6,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 6,
+      "title": "The Scholarship Papers",
+      "chunk": "\"I must explain to you, Mr. Holmes, that to-morrow is the first day of the examination for the Fortescue Scholarship...\"",
+      "summary": "Soames explains the examination for the Fortescue Scholarship and that the secret test papers were tampered with while he was away for tea.",
+      "keywords": [
+        "Fortescue Scholarship",
+        "Greek",
+        "examination",
+        "Thucydides"
+      ],
+      "entities": {
+        "people": [
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [
+          "tomorrow"
+        ],
+        "technologies": []
+      },
+      "topics": [
+        "academia",
+        "fraud"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.8,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Who tampered with the papers?"
+      ],
+      "references": []
+    },
+    {
+      "id": 14,
+      "title": "Physical Evidence Found",
+      "chunk": "\"This was not all. I have a new writing-table... I found a clean cut in it about three inches long... a small ball of black dough, or clay...\"",
+      "summary": "Soames describes specific physical evidence: a cut in the desk, pencil shavings, and black dough/clay.",
+      "keywords": [
+        "evidence",
+        "clay",
+        "pencil"
+      ],
+      "entities": {
+        "people": [
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "investigation"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.4
+      },
+      "importance_score": 0.9,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 35,
+      "title": "The Suspects",
+      "chunk": "\"I will tell you, then, in a few words the character of the three men who inhabit these rooms. The lower of the three is Gilchrist... The second floor is inhabited by Daulat Ras... The top floor belongs to Miles McLaren.\"",
+      "summary": "Soames outlines the three students living on the stair: Gilchrist (athlete/scholar), Daulat Ras (Indian student), and Miles McLaren (dissipated genius).",
+      "keywords": [
+        "Gilchrist",
+        "Daulat Ras",
+        "Miles McLaren",
+        "suspects"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist",
+          "Daulat Ras",
+          "Miles McLaren"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "character profiling"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.7,
+      "chunk_type": "data",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 61,
+      "title": "Resolution and Confession",
+      "chunk": "The student had drawn himself erect. \"Yes, sir, it is true,\" said he... Gilchrist pointed to Bannister. \"There is the man who set me in the right path,\" said he.",
+      "summary": "Gilchrist confesses to the fraud, prompted by Bannister's intervention. Gilchrist intends to join the Rhodesian Police instead of taking the exam.",
+      "keywords": [
+        "confession",
+        "Gilchrist",
+        "Bannister"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist",
+          "Bannister"
+        ],
+        "organizations": [
+          "Rhodesian Police"
+        ],
+        "locations": [
+          "Rhodesia"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "ethics",
+        "resolution"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.4
+      },
+      "importance_score": 1.0,
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    }
+  ]
+}
