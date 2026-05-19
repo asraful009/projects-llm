@@ -1,49 +1,49 @@
 {
   "document_title": "The Adventure of the Three Students",
-  "document_summary": "Sherlock Holmes and Dr. Watson investigate a case of academic fraud at a university, where examination papers for the Fortescue Scholarship were tampered with. Holmes deduces that a student, Gilchrist, used his height to spot the papers and his athletic background to break in, while the tutor's servant, Bannister, attempted to shield the boy due to a past connection to the student's family.",
+  "document_summary": "Sherlock Holmes investigates a scandal involving an attempted cheating scheme on a prestigious scholarship examination at St. Luke's College. Through deductive reasoning and physical evidence found at the scene—including specialized clay and pencil shavings—Holmes identifies the culprit as a student named Gilchrist, whose actions were partially shielded by a loyal family servant, Bannister.",
   "document_type": "story",
   "language": "en",
-  "estimated_reading_time_minutes": 22,
+  "estimated_reading_time_minutes": 15,
   "global_keywords": [
     "Sherlock Holmes",
-    "academic fraud",
-    "investigation",
-    "scholarship",
-    "deduction"
+    "mystery",
+    "scholarship examination",
+    "cheating",
+    "deduction",
+    "St. Luke's College"
   ],
   "global_entities": {
     "people": [
       "Sherlock Holmes",
-      "Dr. Watson",
+      "Dr. John Watson",
       "Hilton Soames",
-      "Bannister",
       "Gilchrist",
       "Daulat Ras",
       "Miles McLaren",
+      "Bannister",
       "Sir Jabez Gilchrist"
     ],
     "organizations": [
       "St. Luke's College",
-      "University",
       "Rhodesian Police"
     ],
     "locations": [
+      "University town",
       "Baker Street",
-      "South Africa",
-      "Rhodesia"
+      "South Africa"
     ],
     "dates": [
       "1895"
     ],
     "technologies": [
+      "pencil",
       "electric light"
     ]
   },
   "topics": [
-    "mystery",
-    "detective fiction",
-    "academia",
-    "ethics"
+    "Detective Fiction",
+    "Academic Integrity",
+    "Mystery"
   ],
   "sentiment": {
     "overall": "neutral",
@@ -63,7 +63,8 @@
       ],
       "entities": {
         "people": [
-          "Arthur Conan Doyle"
+          "Arthur Conan Doyle",
+          "Sherlock Holmes"
         ],
         "organizations": [],
         "locations": [],
@@ -71,7 +72,7 @@
         "technologies": []
       },
       "topics": [
-        "literature"
+        "Detective Fiction"
       ],
       "sentiment": {
         "label": "neutral",
@@ -86,13 +87,13 @@
     },
     {
       "id": 1,
-      "title": "Setting the Scene",
-      "chunk": "It was in the year '95 that a combination of events, into which I\n need not enter, caused Mr. Sherlock Holmes and myself to spend some\n weeks in one of our great University towns...",
-      "summary": "Watson introduces the setting of the mystery in 1895 at a university town, establishing the need for discretion.",
+      "title": "The Setting and Premises",
+      "chunk": "It was in the year '95 that a combination of events, into which I\n need not enter, caused Mr. Sherlock Holmes and myself to spend some\n weeks in one of our great University towns, and it was during this\n time that the small but instructive adventure which I am about to\n relate befell us...",
+      "summary": "Watson introduces the context of a scandal at a university town in 1895, promising discretion to protect the reputation of those involved.",
       "keywords": [
         "1895",
-        "university",
-        "discretion"
+        "University",
+        "scandal"
       ],
       "entities": {
         "people": [
@@ -109,7 +110,7 @@
         "technologies": []
       },
       "topics": [
-        "mystery"
+        "Detective Fiction"
       ],
       "sentiment": {
         "label": "neutral",
@@ -119,20 +120,24 @@
       "chunk_type": "introduction",
       "contains_action_items": false,
       "action_items": [],
-      "questions_raised": [],
+      "questions_raised": [
+        "What is the nature of the scandal?"
+      ],
       "references": []
     },
     {
       "id": 2,
       "title": "The Arrival of Mr. Soames",
-      "chunk": "We were residing at the time in furnished lodgings close to a library... Here it was that one evening we received a visit from an acquaintance, Mr. Hilton Soames, tutor and lecturer at the College of St. Luke's.",
-      "summary": "Mr. Hilton Soames visits Holmes in a state of agitation, signaling the start of the mystery.",
+      "chunk": "We were residing at the time in furnished lodgings close to a library\n where Sherlock Holmes was pursuing some laborious researches in early\n English charters... Here it was that one evening we received a visit from an acquaintance, Mr. Hilton Soames, tutor and lecturer at the College of St. Luke's.",
+      "summary": "Holmes and Watson are interrupted by Hilton Soames, a distressed tutor from St. Luke's College.",
       "keywords": [
         "Hilton Soames",
         "St. Luke's"
       ],
       "entities": {
         "people": [
+          "Sherlock Holmes",
+          "Watson",
           "Hilton Soames"
         ],
         "organizations": [
@@ -143,29 +148,30 @@
         "technologies": []
       },
       "topics": [
-        "investigation"
+        "Mystery"
       ],
       "sentiment": {
         "label": "negative",
         "score": -0.3
       },
-      "importance_score": 0.5,
+      "importance_score": 0.4,
       "chunk_type": "background",
       "contains_action_items": false,
       "action_items": [],
       "questions_raised": [
-        "What incident occurred at St. Luke's?"
+        "Why is Soames so agitated?"
       ],
       "references": []
     },
     {
       "id": 3,
-      "title": "The Request for Help",
-      "chunk": "\"I trust, Mr. Holmes, that you can spare me a few hours... We have had a very painful incident at St. Luke's...\"",
-      "summary": "Soames asks for Holmes's help regarding a secret incident, preferring his discretion over police involvement.",
+      "title": "Soames's Request",
+      "chunk": "\"I trust, Mr. Holmes, that you can spare me a few hours of your\n valuable time. We have had a very painful incident at St. Luke's...\"",
+      "summary": "Soames asks Holmes for help with a sensitive incident at his college, hoping to avoid police involvement.",
       "keywords": [
-        "discretion",
-        "scandal"
+        "scandal",
+        "help",
+        "St. Luke's"
       ],
       "entities": {
         "people": [
@@ -180,13 +186,52 @@
         "technologies": []
       },
       "topics": [
-        "mystery"
+        "Mystery"
       ],
       "sentiment": {
         "label": "negative",
-        "score": -0.2
+        "score": -0.4
       },
-      "importance_score": 0.6,
+      "importance_score": 0.5,
+      "chunk_type": "argument",
+      "contains_action_items": true,
+      "action_items": [
+        "Help resolve a sensitive scandal at the college."
+      ],
+      "questions_raised": [
+        "What is the 'painful incident'?"
+      ],
+      "references": []
+    },
+    {
+      "id": 4,
+      "title": "Maintaining Discretion",
+      "chunk": "\"No, no, my dear sir; such a course is utterly impossible. When once\n the law is evoked it cannot be stayed again...\"",
+      "summary": "Soames emphasizes the necessity of discretion to protect the college's reputation.",
+      "keywords": [
+        "discretion",
+        "scandal"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [
+          "college"
+        ],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Ethics"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.5
+      },
+      "importance_score": 0.4,
       "chunk_type": "argument",
       "contains_action_items": false,
       "action_items": [],
@@ -194,15 +239,87 @@
       "references": []
     },
     {
+      "id": 5,
+      "title": "Holmes Accepts",
+      "chunk": "My friend's temper had not improved since he had been deprived of the\n congenial surroundings of Baker Street... He shrugged his shoulders in ungracious acquiescence...",
+      "summary": "Holmes begrudgingly agrees to hear the story.",
+      "keywords": [
+        "Holmes",
+        "Baker Street"
+      ],
+      "entities": {
+        "people": [
+          "Holmes"
+        ],
+        "organizations": [],
+        "locations": [
+          "Baker Street"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Character"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": -0.2
+      },
+      "importance_score": 0.2,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
       "id": 6,
-      "title": "The Scholarship Papers",
-      "chunk": "\"I must explain to you, Mr. Holmes, that to-morrow is the first day of the examination for the Fortescue Scholarship...\"",
-      "summary": "Soames explains the examination for the Fortescue Scholarship and that the secret test papers were tampered with while he was away for tea.",
+      "title": "The Fortescue Scholarship",
+      "chunk": "\"I must explain to you, Mr. Holmes, that to-morrow is the first day\n of the examination for the Fortescue Scholarship...\"",
+      "summary": "Soames explains that as an examiner for the prestigious Fortescue Scholarship, he is responsible for keeping the secret Greek translation paper safe.",
       "keywords": [
         "Fortescue Scholarship",
-        "Greek",
         "examination",
-        "Thucydides"
+        "Greek",
+        "proofs"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [
+          "to-morrow"
+        ],
+        "technologies": []
+      },
+      "topics": [
+        "Education"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.7,
+      "chunk_type": "background",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Were the papers stolen?"
+      ],
+      "references": []
+    },
+    {
+      "id": 7,
+      "title": "Leaving the Proofs",
+      "chunk": "\"To-day about three o'clock the proofs of this paper arrived from the\n printers... At four-thirty my task was not yet completed. I had,\n however, promised to take tea... so I left the proof upon my desk.\"",
+      "summary": "Soames describes leaving the exam proofs unattended for over an hour.",
+      "keywords": [
+        "proofs",
+        "printer",
+        "tea"
       ],
       "entities": {
         "people": [
@@ -211,17 +328,89 @@
         "organizations": [],
         "locations": [],
         "dates": [
-          "tomorrow"
+          "today"
         ],
         "technologies": []
       },
       "topics": [
-        "academia",
-        "fraud"
+        "Mystery"
       ],
       "sentiment": {
         "label": "neutral",
-        "score": 0.0
+        "score": -0.1
+      },
+      "importance_score": 0.6,
+      "chunk_type": "data",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 8,
+      "title": "The Key in the Door",
+      "chunk": "\"You are aware, Mr. Holmes, that our college doors are double... As I approached\n my outer door I was amazed to see a key in it... The only duplicate... was that which belonged to my servant, Bannister...\"",
+      "summary": "Soames discovers his servant Bannister's key left in the lock, implying someone might have entered the room while he was away.",
+      "keywords": [
+        "key",
+        "Bannister",
+        "door"
+      ],
+      "entities": {
+        "people": [
+          "Bannister",
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [
+          "college"
+        ],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.7,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Did Bannister let someone in?",
+        "Was the room entered?"
+      ],
+      "references": []
+    },
+    {
+      "id": 9,
+      "title": "Evidence of Disturbance",
+      "chunk": "\"The moment I looked at my table I was aware that someone had\n rummaged among my papers... I found that one of them was lying on\n the floor, one was on the side table...\"",
+      "summary": "Soames notices the exam papers were moved and tampered with.",
+      "keywords": [
+        "papers",
+        "table"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.4
       },
       "importance_score": 0.8,
       "chunk_type": "evidence",
@@ -233,14 +422,187 @@
       "references": []
     },
     {
-      "id": 14,
-      "title": "Physical Evidence Found",
-      "chunk": "\"This was not all. I have a new writing-table... I found a clean cut in it about three inches long... a small ball of black dough, or clay...\"",
-      "summary": "Soames describes specific physical evidence: a cut in the desk, pencil shavings, and black dough/clay.",
+      "id": 10,
+      "title": "Holmes's Observation",
+      "chunk": "Holmes stirred for the first time. \"The first page on the floor, the second in the window, the third\n where you left it,\" said he.",
+      "summary": "Holmes deduces the exact location of the disturbed papers, showing immediate insight.",
       "keywords": [
-        "evidence",
+        "deduction",
+        "papers"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.3
+      },
+      "importance_score": 0.6,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 11,
+      "title": "Soames's Surprise",
+      "chunk": "\"Exactly, Mr. Holmes. You amaze me. How could you possibly know\n that?\"",
+      "summary": "Soames is astonished by Holmes's accuracy.",
+      "keywords": [
+        "amazement"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.4
+      },
+      "importance_score": 0.2,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 12,
+      "title": "Suspecting Intrusion",
+      "chunk": "\"For an instant I imagined that Bannister had taken the unpardonable\n liberty... The alternative was that someone passing had observed the key in the door...\"",
+      "summary": "Soames considers the possibility of an outside intruder looking to gain an advantage in the scholarship.",
+      "keywords": [
+        "intruder",
+        "scholarship",
+        "advantage"
+      ],
+      "entities": {
+        "people": [
+          "Bannister",
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Ethics"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.5,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Who had the opportunity to enter?"
+      ],
+      "references": []
+    },
+    {
+      "id": 13,
+      "title": "Physical Traces",
+      "chunk": "\"Bannister was very much upset... I soon saw that the\n intruder had left other traces... On the table in the window were several shreds from a pencil... A broken tip of lead...\"",
+      "summary": "Soames reports finding physical evidence: pencil shavings and a broken lead, suggesting the culprit copied the papers.",
+      "keywords": [
+        "pencil",
+        "traces",
+        "intruder"
+      ],
+      "entities": {
+        "people": [
+          "Bannister",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": [
+          "pencil"
+        ]
+      },
+      "topics": [
+        "Mystery",
+        "Forensics"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.2
+      },
+      "importance_score": 0.9,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Whose pencil was it?"
+      ],
+      "references": []
+    },
+    {
+      "id": 14,
+      "title": "Holmes's Engagement",
+      "chunk": "\"Excellent!\" said Holmes, who was recovering his good-humour as his\n attention became more engrossed by the case. \"Fortune has been your\n friend.\"",
+      "summary": "Holmes becomes interested in the case due to the evidence.",
+      "keywords": [
+        "Holmes",
+        "case"
+      ],
+      "entities": {
+        "people": [
+          "Holmes"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.5
+      },
+      "importance_score": 0.3,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 15,
+      "title": "Additional Evidence",
+      "chunk": "\"This was not all. I have a new writing-table... I found a clean cut in it... on the table I found a small ball of black dough, or clay, with\n specks of something which looks like sawdust in it.\"",
+      "summary": "Soames reports more physical evidence: a cut in the desk and a mysterious ball of clay with sawdust.",
+      "keywords": [
         "clay",
-        "pencil"
+        "desk",
+        "sawdust"
       ],
       "entities": {
         "people": [
@@ -252,13 +614,439 @@
         "technologies": []
       },
       "topics": [
-        "investigation"
+        "Mystery",
+        "Forensics"
       ],
       "sentiment": {
         "label": "negative",
-        "score": -0.4
+        "score": -0.3
       },
       "importance_score": 0.9,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Where did the clay come from?"
+      ],
+      "references": []
+    },
+    {
+      "id": 16,
+      "title": "Potential Suspects",
+      "chunk": "\"I shall be happy to look into it... Had anyone visited you in your room after the papers came to you?\"\n \"Yes; young Daulat Ras, an Indian student...\"",
+      "summary": "Holmes asks if anyone had access, identifying a student named Daulat Ras who visited Soames earlier.",
+      "keywords": [
+        "Daulat Ras",
+        "student",
+        "papers"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Daulat Ras"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.6,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Was it the Indian student?"
+      ],
+      "references": []
+    },
+    {
+      "id": 17,
+      "title": "Investigating Access",
+      "chunk": "\"But might be recognised as proofs?\"... \"Did anyone know that these proofs would be there?\"... \"No one save the printer.\"",
+      "summary": "Holmes probes whether others knew about the presence of the sensitive papers.",
+      "keywords": [
+        "printer",
+        "papers",
+        "Bannister"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.5,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 18,
+      "title": "Heading to the Scene",
+      "chunk": "\"You left your door open?\"\n \"I locked up the papers first.\"\n \"Then it amounts to this... the man who tampered with them came upon them accidentally...\"",
+      "summary": "Holmes concludes that the intruder likely found the papers accidentally and prepares to visit the scene.",
+      "keywords": [
+        "door",
+        "accidental",
+        "scene"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.5,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 19,
+      "title": "Observing the Courtyard",
+      "chunk": "The sitting-room of our client opened... on to the ancient lichen-tinted court... Holmes halted and looked earnestly at the window.",
+      "summary": "Holmes examines the exterior layout of the college rooms.",
+      "keywords": [
+        "courtyard",
+        "college",
+        "window"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson",
+          "Soames"
+        ],
+        "organizations": [
+          "college"
+        ],
+        "locations": [
+          "court"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.4,
+      "chunk_type": "background",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "What is Holmes looking for at the window?"
+      ],
+      "references": []
+    },
+    {
+      "id": 20,
+      "title": "Examining the Room",
+      "chunk": "\"He must have entered through the door...\"... We stood at the entrance while Holmes made an examination of the carpet.",
+      "summary": "Holmes begins a physical inspection of the room.",
+      "keywords": [
+        "room",
+        "carpet"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.5,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 21,
+      "title": "Analyzing the Servant's Chair",
+      "chunk": "\"I am afraid there are no signs here,\" said he. \"One could hardly\n hope for any upon so dry a day. Your servant seems to have quite\n recovered. You left him in a chair, you say; which chair?\"",
+      "summary": "Holmes focuses on the location of Bannister the servant following the discovery.",
+      "keywords": [
+        "Bannister",
+        "chair"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.5,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Why is Holmes interested in the chair?"
+      ],
+      "references": []
+    },
+    {
+      "id": 22,
+      "title": "Reconstructing the Crime",
+      "chunk": "\"I see. Near this little table... The man entered and took the papers... He carried them over to the window table...\"",
+      "summary": "Holmes reconstructs the thief's actions in the room.",
+      "keywords": [
+        "papers",
+        "theft",
+        "reconstruction"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.7,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 23,
+      "title": "Intruder's Escape",
+      "chunk": "\"As a matter of fact he could not,\" said Soames, \"for I entered by\n the side door.\"",
+      "summary": "Soames clarifies that the side door prevented a direct escape.",
+      "keywords": [
+        "escape",
+        "side door"
+      ],
+      "entities": {
+        "people": [
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 24,
+      "title": "Timeline of Theft",
+      "chunk": "\"Ah, that's good! Well, anyhow, that was in his mind. Let me see the\n three strips... How long would it take him to do that... A quarter of an hour, not less.\"",
+      "summary": "Holmes estimates the time taken to copy the papers as at least fifteen minutes.",
+      "keywords": [
+        "time",
+        "papers"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.6,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 25,
+      "title": "No Noise",
+      "chunk": "\"You were not aware of any hurrying feet\n on the stair as you entered the outer door?\"\n \"No, I can't say I was.\"",
+      "summary": "Holmes questions if Soames heard any movement, noting the lack of sound.",
+      "keywords": [
+        "sound",
+        "stair"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 26,
+      "title": "The Specific Pencil",
+      "chunk": "\"Well, he wrote so furiously that he broke his pencil... The\n pencil was not an ordinary one. It was above the usual size, with a\n soft lead; the outer colour was dark blue...\"",
+      "summary": "Holmes describes the specific features of the pencil left behind, providing a key lead.",
+      "keywords": [
+        "pencil",
+        "lead"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": [
+          "pencil"
+        ]
+      },
+      "topics": [
+        "Forensics"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.3
+      },
+      "importance_score": 0.9,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Whose pencil is it?"
+      ],
+      "references": []
+    },
+    {
+      "id": 27,
+      "title": "The Pencil Clue",
+      "chunk": "Mr. Soames was somewhat overwhelmed by this flood of information... Holmes held out a small chip with the letters NN...",
+      "summary": "Holmes shows Soames a chip of the pencil containing the letters 'NN', pointing toward a specific brand.",
+      "keywords": [
+        "pencil",
+        "clue",
+        "NN"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": [
+          "pencil"
+        ]
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.8,
       "chunk_type": "evidence",
       "contains_action_items": false,
       "action_items": [],
@@ -266,18 +1054,648 @@
       "references": []
     },
     {
-      "id": 35,
-      "title": "The Suspects",
-      "chunk": "\"I will tell you, then, in a few words the character of the three men who inhabit these rooms. The lower of the three is Gilchrist... The second floor is inhabited by Daulat Ras... The top floor belongs to Miles McLaren.\"",
-      "summary": "Soames outlines the three students living on the stair: Gilchrist (athlete/scholar), Daulat Ras (Indian student), and Miles McLaren (dissipated genius).",
+      "id": 28,
+      "title": "Johann Faber",
+      "chunk": "\"Watson, I have always done you an injustice... You are aware that\n Johann Faber is the most common maker's name... And the cut--a positive tear, I\n see.\"",
+      "summary": "Holmes connects the 'NN' to the brand 'Johann Faber' and examines the table for further impressions.",
       "keywords": [
-        "Gilchrist",
-        "Daulat Ras",
-        "Miles McLaren",
-        "suspects"
+        "Johann Faber",
+        "NN",
+        "table"
       ],
       "entities": {
         "people": [
+          "Watson",
+          "Holmes"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": [
+          "pencil"
+        ]
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.7,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 29,
+      "title": "Examining the Bedroom",
+      "chunk": "\"To my bedroom.\"\n \"Have you been in it since your adventure?\"\n \"No; I came straight away for you.\"\n \"I should like to have a glance round.\"",
+      "summary": "Holmes decides to search Soames's bedroom for additional evidence.",
+      "keywords": [
+        "bedroom",
+        "search"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [
+          "bedroom"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.6,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "What will he find in the bedroom?"
+      ],
+      "references": []
+    },
+    {
+      "id": 30,
+      "title": "A Discovery in the Bedroom",
+      "chunk": "As Holmes drew the curtain... Holmes turned away and stooped suddenly to the floor. \"Halloa! What's this?\" said he.",
+      "summary": "Holmes finds something suspicious in the bedroom.",
+      "keywords": [
+        "discovery",
+        "bedroom"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [
+          "bedroom"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.2
+      },
+      "importance_score": 0.8,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "What did Holmes find?"
+      ],
+      "references": []
+    },
+    {
+      "id": 31,
+      "title": "Matching Clay",
+      "chunk": "\"It was a small pyramid of black, putty-like stuff, exactly like the\n one upon the table... 'Your visitor seems to have left traces in your bedroom as well as in\n your sitting-room, Mr. Soames.'\"",
+      "summary": "Holmes identifies another lump of clay in the bedroom, identical to the one in the sitting room.",
+      "keywords": [
+        "clay",
+        "evidence"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Forensics"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.9,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Who was in the bedroom?"
+      ],
+      "references": []
+    },
+    {
+      "id": 32,
+      "title": "A Hiding Culprit",
+      "chunk": "\"I think it is clear enough. You came back by an unexpected way... He caught up everything which would betray him and he rushed into\n your bedroom to conceal himself.\"",
+      "summary": "Holmes deduces that the intruder hid in the bedroom while Soames was talking to Bannister.",
+      "keywords": [
+        "intruder",
+        "hide",
+        "bedroom"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [
+          "bedroom"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.9,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 33,
+      "title": "Alternative Escape",
+      "chunk": "\"Surely there is another alternative... I don't know\n whether you observed my bedroom window?\"... \"The man might have effected his entrance there...\"",
+      "summary": "Soames suggests the intruder might have entered or escaped through the bedroom window.",
+      "keywords": [
+        "window",
+        "escape"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [
+          "window"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.5,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 34,
+      "title": "The Three Students",
+      "chunk": "Holmes shook his head... \"I understand you to say that there\n are three students who use this stair... And they are all in for this examination?\"",
+      "summary": "Holmes asks about the three students living on the same staircase who are taking the exam.",
+      "keywords": [
+        "students",
+        "examination"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.6,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Which student is the culprit?"
+      ],
+      "references": []
+    },
+    {
+      "id": 35,
+      "title": "Suspicions",
+      "chunk": "\"Let us hear the suspicions. I will look after the proofs.\"",
+      "summary": "Holmes demands to hear Soames's suspicions about the three students.",
+      "keywords": [
+        "suspicions",
+        "proofs"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.4,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 36,
+      "title": "Gilchrist",
+      "chunk": "\"The lower of the three is Gilchrist, a fine\n scholar and athlete... His father was the notorious Sir Jabez\n Gilchrist...\"",
+      "summary": "Soames describes Gilchrist, a talented athlete from a fallen, impoverished family.",
+      "keywords": [
+        "Gilchrist",
+        "athlete",
+        "scholar"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist",
+          "Sir Jabez Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Characters"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.2
+      },
+      "importance_score": 0.6,
+      "chunk_type": "background",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 37,
+      "title": "Daulat Ras",
+      "chunk": "\"The second floor is inhabited by Daulat Ras, the Indian... He is a\n quiet, inscrutable fellow... steady and methodical.\"",
+      "summary": "Soames describes Daulat Ras as a steady, methodical Indian student.",
+      "keywords": [
+        "Daulat Ras",
+        "student"
+      ],
+      "entities": {
+        "people": [
+          "Daulat Ras"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Characters"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.5,
+      "chunk_type": "background",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 38,
+      "title": "Miles McLaren",
+      "chunk": "\"The top floor belongs to Miles McLaren. He is a brilliant fellow... wayward, dissipated, and unprincipled... I dare not go so far as that. But of the three he is perhaps the\n least unlikely.\"",
+      "summary": "Soames describes Miles McLaren as a brilliant but troubled and unprincipled student, suggesting he is a prime suspect.",
+      "keywords": [
+        "Miles McLaren",
+        "suspect"
+      ],
+      "entities": {
+        "people": [
+          "Miles McLaren"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Characters"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.4
+      },
+      "importance_score": 0.7,
+      "chunk_type": "background",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 39,
+      "title": "Questioning Bannister",
+      "chunk": "\"Exactly. Now, Mr. Soames, let us have a look at your servant,\n Bannister.\"\n ... \"I understand,\" said Holmes, \"that you left your key in the door?\"",
+      "summary": "Holmes begins questioning the servant, Bannister, about the key.",
+      "keywords": [
+        "Bannister",
+        "key",
+        "interrogation"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.7,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Is Bannister lying?"
+      ],
+      "references": []
+    },
+    {
+      "id": 40,
+      "title": "The Servant's Account",
+      "chunk": "\"It was most unfortunate, sir. But I have occasionally done the same\n thing at other times.\"\n ... \"I had the tea-tray in my hand. I thought I would come back for the\n key. Then I forgot.\"",
+      "summary": "Bannister explains that he forgot the key accidentally while carrying a tea tray.",
+      "keywords": [
+        "key",
+        "tea",
+        "forgetfulness"
+      ],
+      "entities": {
+        "people": [
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": -0.1
+      },
+      "importance_score": 0.5,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 41,
+      "title": "Bannister's Nervousness",
+      "chunk": "\"Yes, sir. Such a thing has never happened... I nearly fainted, sir.\"\n \"So I understand. Where were you when you began to feel bad?\"\n \"Where was I, sir? Why, here, near the door.\"",
+      "summary": "Holmes questions Bannister about where he sat when he felt ill, noting an inconsistency in his behavior.",
+      "keywords": [
+        "nervousness",
+        "Bannister"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.6,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Why did he sit near the door instead of other chairs?"
+      ],
+      "references": []
+    },
+    {
+      "id": 42,
+      "title": "Bannister's Loyalty",
+      "chunk": "\"I really don't think he knew much about it... I don't believe there is any\n gentleman in this University who is capable of profiting by such an\n action.\"",
+      "summary": "Bannister expresses disbelief that any student would cheat.",
+      "keywords": [
+        "loyalty",
+        "cheating"
+      ],
+      "entities": {
+        "people": [
+          "Bannister",
+          "Soames"
+        ],
+        "organizations": [
+          "University"
+        ],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Ethics"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.2
+      },
+      "importance_score": 0.4,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 43,
+      "title": "Preparing for the Night",
+      "chunk": "\"Thank you; that will do,\" said Holmes... \"Now, Mr. Soames, we will take a walk in the quadrangle, if you please.\"\n Three yellow squares of light shone above us in the gathering gloom.",
+      "summary": "Holmes finishes questioning Bannister and takes Soames outside to watch the students' rooms.",
+      "keywords": [
+        "quadrangle",
+        "lights"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [
+          "quadrangle"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Are the students in their rooms?"
+      ],
+      "references": []
+    },
+    {
+      "id": 44,
+      "title": "Watching the Students",
+      "chunk": "\"Your three birds are all in their nests,\" said Holmes... It was the Indian, whose dark silhouette appeared suddenly upon his\n blind.",
+      "summary": "Holmes observes that all three students are in their rooms.",
+      "keywords": [
+        "students",
+        "room"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Daulat Ras"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.4,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "What is the Indian student doing?"
+      ],
+      "references": []
+    },
+    {
+      "id": 45,
+      "title": "Inspecting the Rooms",
+      "chunk": "\"No difficulty in the world,\" Soames answered... \"No names, please!\" said Holmes, as we knocked at Gilchrist's door.",
+      "summary": "Soames arranges for Holmes to visit the rooms of the three students under the guise of an architectural tour.",
+      "keywords": [
+        "tour",
+        "rooms"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.5,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 46,
+      "title": "Visits to Students",
+      "chunk": "Holmes was so charmed with one of them that he insisted on drawing it... The same curious accident happened to him\n in the rooms of the Indian... Only at the third did our visit prove abortive.",
+      "summary": "Holmes visits the rooms of Gilchrist and Daulat Ras, but McLaren refuses entry, shouting abuse.",
+      "keywords": [
+        "rooms",
+        "McLaren",
+        "Gilchrist",
+        "Indian"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
           "Gilchrist",
           "Daulat Ras",
           "Miles McLaren"
@@ -288,14 +1706,506 @@
         "technologies": []
       },
       "topics": [
-        "character profiling"
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.7,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Why did McLaren refuse entry?"
+      ],
+      "references": []
+    },
+    {
+      "id": 47,
+      "title": "Height Inquiry",
+      "chunk": "\"A rude fellow,\" said our guide... Holmes's response was a curious one. \"Can you tell me his exact height?\" he asked.",
+      "summary": "Soames complains about McLaren, while Holmes focuses on the student's height.",
+      "keywords": [
+        "height",
+        "McLaren"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
       ],
       "sentiment": {
         "label": "neutral",
         "score": 0.0
       },
+      "importance_score": 0.4,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Why is height important?"
+      ],
+      "references": []
+    },
+    {
+      "id": 48,
+      "title": "Holmes's Departure",
+      "chunk": "\"That is very important,\" said Holmes. \"And now, Mr. Soames, I wish\n you good-night.\"",
+      "summary": "Holmes leaves Soames for the night, promising to solve the issue the next morning.",
+      "keywords": [
+        "departure",
+        "good-night"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [
+          "tonight"
+        ],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 49,
+      "title": "Instructions for Soames",
+      "chunk": "\"You must leave it as it is. I shall drop round early to-morrow\n morning... You can be perfectly easy in your mind.\"",
+      "summary": "Holmes tells Soames not to take any action until he returns the next morning.",
+      "keywords": [
+        "instruction",
+        "tomorrow"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [
+          "tomorrow"
+        ],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.3
+      },
+      "importance_score": 0.4,
+      "chunk_type": "argument",
+      "contains_action_items": true,
+      "action_items": [
+        "Do not change anything until morning."
+      ],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 50,
+      "title": "Reflecting on the Clues",
+      "chunk": "When we were out in the darkness... \"Well, Watson, what do you think of it?\"... \"Quite a little parlour game--sort of\n three-card trick, is it not?\"",
+      "summary": "Holmes and Watson discuss the puzzle, reflecting on the three students.",
+      "keywords": [
+        "puzzle",
+        "discussion"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 51,
+      "title": "Watson's Suspects",
+      "chunk": "\"The foul-mouthed fellow at the top. He is the one with the worst\n record. And yet that Indian was a sly fellow also.\"",
+      "summary": "Watson shares his thoughts on the suspects: McLaren and Daulat Ras.",
+      "keywords": [
+        "McLaren",
+        "Daulat Ras",
+        "suspects"
+      ],
+      "entities": {
+        "people": [
+          "Watson",
+          "Holmes"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Characters"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 52,
+      "title": "Holmes's Uncertainty",
+      "chunk": "\"But that fellow does puzzle me.\"\n \"Who?\"\n \"Why, Bannister, the servant. What's his game in the matter?\"",
+      "summary": "Holmes expresses confusion regarding the servant, Bannister.",
+      "keywords": [
+        "Bannister",
+        "puzzle"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson",
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.2
+      },
+      "importance_score": 0.5,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Why is Bannister a puzzle?"
+      ],
+      "references": []
+    },
+    {
+      "id": 53,
+      "title": "Searching for Pencil Shops",
+      "chunk": "\"So he did me. That's the puzzling part... well, well, here's a large stationer's. We shall begin our researches here.\"",
+      "summary": "Holmes and Watson decide to search for the specialized pencil in local stationer shops.",
+      "keywords": [
+        "stationer",
+        "pencil",
+        "research"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": [
+          "pencil"
+        ]
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.4,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 54,
+      "title": "Stationer Research",
+      "chunk": "There were only four stationers of any consequence in the town, and\n at each Holmes produced his pencil chips... All were agreed that one could be ordered, but that it was\n not a usual size...",
+      "summary": "They visit local shops but are unable to find a match for the pencil, confirming it is rare.",
+      "keywords": [
+        "stationers",
+        "pencil",
+        "failure"
+      ],
+      "entities": {
+        "people": [
+          "Holmes"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": [
+          "pencil"
+        ]
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.5,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 55,
+      "title": "Holmes's Confidence",
+      "chunk": "\"No good, my dear Watson. This, the best and only final clue, has run\n to nothing. But, indeed, I have little doubt that we can build up a\n sufficient case without it.\"",
+      "summary": "Holmes isn't discouraged, believing they have enough evidence to build the case.",
+      "keywords": [
+        "clue",
+        "case",
+        "confidence"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.4
+      },
+      "importance_score": 0.5,
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 56,
+      "title": "Next Morning",
+      "chunk": "Holmes made no further allusion... At\n eight in the morning he came into my room... \"Well, Watson,\" said he, \"it is time we went down to St. Luke's.\"",
+      "summary": "Holmes and Watson return to St. Luke's the next morning.",
+      "keywords": [
+        "morning",
+        "St. Luke's"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [
+          "St. Luke's"
+        ],
+        "locations": [],
+        "dates": [
+          "8:00 AM"
+        ],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.3,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 57,
+      "title": "Solved Mystery",
+      "chunk": "\"You have formed a conclusion?\"\n \"Yes, my dear Watson; I have solved the mystery.\"\n \"But what fresh evidence could you have got?\"",
+      "summary": "Holmes confirms that he has solved the mystery.",
+      "keywords": [
+        "mystery",
+        "solved"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.6
+      },
       "importance_score": 0.7,
-      "chunk_type": "data",
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "How did he solve it?"
+      ],
+      "references": []
+    },
+    {
+      "id": 58,
+      "title": "New Evidence",
+      "chunk": "Aha! It is not for nothing that I have turned myself out of bed at\n the untimely hour of six. I have put in two hours' hard work... He held out his hand. On the palm were three little pyramids of\n black, doughy clay.",
+      "summary": "Holmes reveals he found another piece of the black clay, confirming the source.",
+      "keywords": [
+        "clay",
+        "evidence"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [
+          "6:00 AM"
+        ],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.5
+      },
+      "importance_score": 0.8,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 59,
+      "title": "Facing the Tutor",
+      "chunk": "The unfortunate tutor was certainly in a state of pitiable agitation\n when we found him in his chambers. ... \"Shall the examination proceed?\"\n \"Yes; let it proceed by all means.\"",
+      "summary": "They find Soames, who is anxious about the upcoming exam.",
+      "keywords": [
+        "Soames",
+        "examination"
+      ],
+      "entities": {
+        "people": [
+          "Soames",
+          "Holmes",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.4,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 60,
+      "title": "A Private Court-Martial",
+      "chunk": "\"He shall not compete.\"\n \"You know him?\"\n \"I think so. If this matter is not to become public we must give\n ourselves certain powers...\"",
+      "summary": "Holmes organizes a private confrontation in the room.",
+      "keywords": [
+        "confrontation",
+        "court-martial"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Watson"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.6,
+      "chunk_type": "methodology",
       "contains_action_items": false,
       "action_items": [],
       "questions_raised": [],
@@ -303,38 +2213,626 @@
     },
     {
       "id": 61,
-      "title": "Resolution and Confession",
-      "chunk": "The student had drawn himself erect. \"Yes, sir, it is true,\" said he... Gilchrist pointed to Bannister. \"There is the man who set me in the right path,\" said he.",
-      "summary": "Gilchrist confesses to the fraud, prompted by Bannister's intervention. Gilchrist intends to join the Rhodesian Police instead of taking the exam.",
+      "title": "Bannister Confronted",
+      "chunk": "Bannister entered, and shrunk back in evident surprise and fear... \"Now, Bannister, will\n you please tell us the truth about yesterday's incident?\"",
+      "summary": "Holmes confronts Bannister, pressing him to admit his role.",
+      "keywords": [
+        "Bannister",
+        "confrontation"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Bannister"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.7,
+      "chunk_type": "argument",
+      "contains_action_items": true,
+      "action_items": [
+        "Tell the truth about the incident."
+      ],
+      "questions_raised": [
+        "What did Bannister do?"
+      ],
+      "references": []
+    },
+    {
+      "id": 62,
+      "title": "Accusing Bannister",
+      "chunk": "\"But it seems probable enough, since the moment that Mr. Soames's back was turned you released the man who was\n hiding in that bedroom.\"",
+      "summary": "Holmes accuses Bannister of helping the intruder escape.",
+      "keywords": [
+        "Bannister",
+        "intruder",
+        "escape"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Bannister",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [
+          "bedroom"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.5
+      },
+      "importance_score": 0.8,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Will Bannister confess?"
+      ],
+      "references": []
+    },
+    {
+      "id": 63,
+      "title": "Summoning Gilchrist",
+      "chunk": "\"In that case you can give us no further information... Now, Soames, I am going to ask you to have the great kindness to go\n up to the room of young Gilchrist...\"",
+      "summary": "Holmes calls for Gilchrist to come to the room, revealing he is the prime suspect.",
+      "keywords": [
+        "Gilchrist",
+        "suspect"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Methodology"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.7,
+      "chunk_type": "methodology",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "Is Gilchrist guilty?"
+      ],
+      "references": []
+    },
+    {
+      "id": 64,
+      "title": "Confronting Gilchrist",
+      "chunk": "An instant later the tutor returned, bringing with him the student... \"We want to know, Mr. Gilchrist, how you, an honourable man, ever came to commit\n such an action as that of yesterday?\"",
+      "summary": "Gilchrist enters and is confronted with his actions.",
+      "keywords": [
+        "Gilchrist",
+        "confrontation"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist",
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Ethics"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.5
+      },
+      "importance_score": 0.8,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "What will Gilchrist say?"
+      ],
+      "references": []
+    },
+    {
+      "id": 65,
+      "title": "Gilchrist's Confession",
+      "chunk": "The next he had thrown himself on his knees beside\n the table and, burying his face in his hands, he had burst into a\n storm of passionate sobbing.",
+      "summary": "Gilchrist collapses and breaks down in tears.",
       "keywords": [
         "confession",
+        "crying"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Ethics"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.6
+      },
+      "importance_score": 0.7,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 66,
+      "title": "Holmes's Summary",
+      "chunk": "\"Come, come,\" said Holmes, kindly... \"Perhaps it would\n be easier for you if I were to tell Mr. Soames what occurred...\"",
+      "summary": "Holmes offers to summarize the events to spare Gilchrist the pain of explaining them.",
+      "keywords": [
+        "Holmes",
         "Gilchrist",
-        "Bannister"
+        "summary"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.3
+      },
+      "importance_score": 0.5,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 67,
+      "title": "Deducing the Intruder",
+      "chunk": "\"From the moment, Mr. Soames, that you said to me that no one... could have told that the papers were in your room... The man who entered knew that the papers were there.\"",
+      "summary": "Holmes explains his reasoning, starting with how the culprit knew the papers were present.",
+      "keywords": [
+        "papers",
+        "intruder",
+        "deduction"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.8,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 68,
+      "title": "The Height Clue",
+      "chunk": "\"When I approached your room I measured how tall\n a man would need to be in order to see as he passed what papers were\n on the central table. I am six feet high... No one less than that would have a chance.\"",
+      "summary": "Holmes explains that he measured the height required to see the papers from the window, which implicated the taller students.",
+      "keywords": [
+        "height",
+        "window",
+        "papers"
+      ],
+      "entities": {
+        "people": [
+          "Holmes"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 0.9,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 69,
+      "title": "The Jumping Connection",
+      "chunk": "\"I could make nothing [of the centre table], until in\n your description of Gilchrist you mentioned that he was a\n long-distance jumper. Then the whole thing came to me in an instant...\"",
+      "summary": "Holmes realizes that Gilchrist's identity as a long-distance jumper explains the physical traces left on the desk.",
+      "keywords": [
+        "jumper",
+        "Gilchrist",
+        "evidence"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.4
+      },
+      "importance_score": 0.9,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 70,
+      "title": "Gilchrist's Impulse",
+      "chunk": "\"What happened was this. This young fellow had employed his afternoon\n at the athletic grounds... As he passed your window he saw... these proofs... A sudden impulse came over\n him to enter...\"",
+      "summary": "Holmes explains that Gilchrist acted on impulse after seeing the papers while holding his spiked jumping shoes.",
+      "keywords": [
+        "impulse",
+        "shoes",
+        "papers"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": [
+          "shoes"
+        ]
+      },
+      "topics": [
+        "Deduction"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": -0.2
+      },
+      "importance_score": 0.9,
+      "chunk_type": "argument",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 71,
+      "title": "The Evidence Explained",
+      "chunk": "\"He thought the tutor must return by the main gate... Suddenly he heard him\n at the very door... He forgot his gloves... I walked out to the athletic grounds... saw that tenacious black clay...\"",
+      "summary": "Holmes links the gloves, the clay, and the spikes to Gilchrist's shoes, solving the case.",
+      "keywords": [
+        "gloves",
+        "clay",
+        "shoes",
+        "spikes"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [
+          "athletic grounds"
+        ],
+        "dates": [],
+        "technologies": [
+          "shoes"
+        ]
+      },
+      "topics": [
+        "Forensics"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.1
+      },
+      "importance_score": 1.0,
+      "chunk_type": "evidence",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 72,
+      "title": "The Culprit Admits",
+      "chunk": "The student had drawn himself erect. \"Yes, sir, it is true,\" said he. \"Good heavens, have you nothing to add?\" cried Soames.",
+      "summary": "Gilchrist admits the truth.",
+      "keywords": [
+        "admission",
+        "Gilchrist"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist",
+          "Soames"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Ethics"
+      ],
+      "sentiment": {
+        "label": "negative",
+        "score": -0.3
+      },
+      "importance_score": 0.6,
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [
+        "What else does Gilchrist have to add?"
+      ],
+      "references": []
+    },
+    {
+      "id": 73,
+      "title": "A Change of Plan",
+      "chunk": "\"Yes, sir, I have... I have a letter here... I have determined not to go in for the examination. I\n have been offered a commission in the Rhodesian Police...\"",
+      "summary": "Gilchrist reveals he had already decided not to take the exam and is instead joining the Rhodesian Police.",
+      "keywords": [
+        "letter",
+        "Rhodesian Police"
+      ],
+      "entities": {
+        "people": [
+          "Gilchrist",
+          "Soames"
+        ],
+        "organizations": [
+          "Rhodesian Police"
+        ],
+        "locations": [
+          "South Africa"
+        ],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Ethics"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.3
+      },
+      "importance_score": 0.7,
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 74,
+      "title": "Bannister's Role",
+      "chunk": "\"I am indeed pleased... But why did you change your\n purpose?\"\n Gilchrist pointed to Bannister. \"There is the man who set me in the right path.\"",
+      "summary": "Gilchrist credits Bannister with guiding him toward the correct moral path.",
+      "keywords": [
+        "Bannister",
+        "morality"
       ],
       "entities": {
         "people": [
           "Gilchrist",
           "Bannister"
         ],
-        "organizations": [
-          "Rhodesian Police"
-        ],
-        "locations": [
-          "Rhodesia"
-        ],
+        "organizations": [],
+        "locations": [],
         "dates": [],
         "technologies": []
       },
       "topics": [
-        "ethics",
-        "resolution"
+        "Ethics"
       ],
       "sentiment": {
         "label": "positive",
         "score": 0.4
       },
-      "importance_score": 1.0,
+      "importance_score": 0.7,
       "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 75,
+      "title": "Bannister's Motivation",
+      "chunk": "\"It was simple enough... I was butler to old Sir Jabez Gilchrist... When he was ruined I came to the college... I\n watched his son all I could for the sake of the old days.\"",
+      "summary": "Bannister explains his deep, long-standing loyalty to Gilchrist's family, which motivated him to protect the young man from his mistake.",
+      "keywords": [
+        "loyalty",
+        "Butler",
+        "Sir Jabez"
+      ],
+      "entities": {
+        "people": [
+          "Bannister",
+          "Sir Jabez Gilchrist",
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Characters"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.5
+      },
+      "importance_score": 0.9,
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 76,
+      "title": "Resolution",
+      "chunk": "\"No, indeed,\" said Holmes, heartily... \"Well,\n Soames, I think we have cleared your little problem up... I trust\n that a bright future awaits you in Rhodesia.\"",
+      "summary": "Holmes concludes the case, expresses approval of the resolution, and departs with Watson.",
+      "keywords": [
+        "resolution",
+        "Holmes",
+        "Watson"
+      ],
+      "entities": {
+        "people": [
+          "Holmes",
+          "Soames",
+          "Watson",
+          "Gilchrist"
+        ],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Mystery"
+      ],
+      "sentiment": {
+        "label": "positive",
+        "score": 0.6
+      },
+      "importance_score": 0.8,
+      "chunk_type": "conclusion",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 77,
+      "title": "Disclaimer",
+      "chunk": "----------\n This text is provided to you \"as-is\" without any warranty...",
+      "summary": "Standard text document disclaimer.",
+      "keywords": [
+        "disclaimer",
+        "warranty"
+      ],
+      "entities": {
+        "people": [],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Other"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.0,
+      "chunk_type": "other",
+      "contains_action_items": false,
+      "action_items": [],
+      "questions_raised": [],
+      "references": []
+    },
+    {
+      "id": 78,
+      "title": "Version Info",
+      "chunk": "This text comes from the collection's version 3.1.",
+      "summary": "Document metadata.",
+      "keywords": [
+        "metadata"
+      ],
+      "entities": {
+        "people": [],
+        "organizations": [],
+        "locations": [],
+        "dates": [],
+        "technologies": []
+      },
+      "topics": [
+        "Other"
+      ],
+      "sentiment": {
+        "label": "neutral",
+        "score": 0.0
+      },
+      "importance_score": 0.0,
+      "chunk_type": "other",
       "contains_action_items": false,
       "action_items": [],
       "questions_raised": [],

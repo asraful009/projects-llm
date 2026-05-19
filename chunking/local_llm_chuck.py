@@ -60,7 +60,7 @@ class LocalLLMChunking:
   def __enrich_chunks(self, chunks: list[str]):
     chunks_text = json.dumps(chunks, indent=2, ensure_ascii=False)
     prompt = self.__load_prompt("./prompt_templates/ai_prompt_template.txt", chunks_text)
-
+    self.__save_to_file(prompt, "./.ai_data/ai_prompt_for_meta.txt")
     return self.__geminiAiCall(prompt)
 
 
@@ -107,3 +107,7 @@ class LocalLLMChunking:
         "summary": "",
         "keywords": []
       }
+
+  def __save_to_file(self, data, filename="chunks.json"):
+    with open(filename, "w", encoding="utf-8") as f:
+      json.dump(data, f, ensure_ascii=False, indent=2)

@@ -67,6 +67,7 @@ class Rag_2:
     with open(full_path, "r", encoding="utf-8") as f:
       meta_info_template = f.read()
     meta_info_embedded_arr = []
+    print(meta_info["chunks"])
     if not meta_info["chunks"]:
       return meta_info_embedded_arr
     print(len(meta_info["chunks"]))

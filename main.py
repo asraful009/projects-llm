@@ -53,12 +53,13 @@ def main():
       meta = json.load(file)
 
   print(meta)
-  meta_embeddings = rag.generate_meta_for_embeddings(meta)
-  print(meta_embeddings)
-  save_to_file(meta_embeddings, ".ai_data/chuck_meta_embedding.json")
-  faq_embeddings = rag.generate_faq_for_embeddings(meta_faq)
-  # print(faq_embeddings)
-  save_to_file(faq_embeddings, ".ai_data/chuck_faq_embedding.json")
+  print(len(meta["chunks"]))
+  # meta_embeddings = rag.generate_meta_for_embeddings(meta)
+  # print(meta_embeddings)
+  # save_to_file(meta_embeddings, ".ai_data/chuck_meta_embedding.json")
+  # faq_embeddings = rag.generate_faq_for_embeddings(meta_faq)
+  # # print(faq_embeddings)
+  # save_to_file(faq_embeddings, ".ai_data/chuck_faq_embedding.json")
 
 
 if __name__ == "__main__":
