@@ -106,3 +106,4 @@ class Rag_2:
       meta_info_embedded_arr.append(embedding_text)
     return meta_info_embedded_arr
 
+  

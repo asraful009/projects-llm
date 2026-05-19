@@ -72,5 +72,8 @@ def main():
   print(meta_embeddings)
   print(faq_embeddings)
 
+
+
+
 if __name__ == "__main__":
   main()
